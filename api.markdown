@@ -1,9 +1,9 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: post
-title: Api Calls
-permalink: /calls/
+layout: page
+title: Api
+permalink: /api/
 ---
 {% for caso in site.data.api.first %}
 {% for resource in caso %}
@@ -43,14 +43,17 @@ permalink: /calls/
 {% if (resource.first != 'index') %}
   <h1> Recurso {{ resource.first }} </h1>
   {% for e in resource.last %}
-  <h1> {{ e.first }} </h1>
+  <h4> {{ e.first }} </h4>
+  <h4> {{ e.last.resource_explanation }} </h4>
+  
   Parámetros:
   <ol>
   {% for parametro in e.last.parameters %}
-  <li>{{ parametro.name  }} ( {{ parametro.description }} ) </li>
+  <li> {% if parametro.required %} * {% endif %} {{ parametro.name  }} ( {{ parametro.description }} ) </li>
   {% endfor %}
   </ol>
   Ejemplo:
+   <li>{{ e.last.explanation }}</li>
   <ol>
   {% for request in e.last.requests %}
     request   

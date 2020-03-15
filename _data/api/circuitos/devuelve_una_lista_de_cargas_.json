@@ -1,0 +1,73 @@
+{
+  "resource": "Circuitos",
+  "resource_explanation": "Preguntas de diseño sobre circuitos",
+  "http_method": "GET",
+  "route": "/api/v1/electrico/circuitos/get.json",
+  "description": "Devuelve una lista de cargas ",
+  "explanation": "Devuelve todas las cargas de una instalación eléctrica ordenadas en circuitos",
+  "parameters": [
+    {
+      "required": true,
+      "name": "macarron_de_autorizacion",
+      "description": "Macarrón de Autorización"
+    },
+    {
+      "required": true,
+      "name": "auth_token",
+      "description": "Token de Autenticación"
+    },
+    {
+      "required": true,
+      "name": "__amp_source_origin",
+      "description": "Origen de Amp Publisher"
+    },
+    {
+      "required": true,
+      "name": "carga_id",
+      "description": "Identificación de la carga en Cargas Tree"
+    },
+    {
+      "required": true,
+      "name": "circuito",
+      "description": "Identificación del tipo de Circuito en Cargas Tree"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/electrico/circuitos/get.json?macarron_de_autorizacion=MDAyOWxvY2F0aW9uIGh0dHA6Ly9iYWNrZW5kLmFsZWN0cmljYS5jbAowMDExaWRlbnRpZmllciB3CjAwMThjaWQgTG9nZ2VkSW4gPSB0cnVlCjAwMmZzaWduYXR1cmUgYxeWi38dN9pNVzfVjhb42AvGOuCDCs-1wreCaIBTu4gK&auth_token=eyJhbGciOiJIUzI1NiJ9.eyJpbnN0YWxhY2lvbiI6IntcIjFcIjp7XCJqc29uX2NsYXNzXCI6XCJEOjpJbnN0YWxhY2lvblwiLFwiaXRlbVwiOlwie1xcXCJub19wb2xvc1xcXCI6MSxcXFwiVW9cXFwiOm51bGwsXFxcIlRcXFwiOm51bGwsXFxcInJlZ2ltZW5cXFwiOm51bGx9XCJ9fSIsInJlYWRlciI6eyJpZCI6MSwicmlkIjoiYW1wcmlkIiwidXNlcl9pZCI6MSwidXNlciI6eyJpZCI6MSwibmFtZSI6IkNoaXJydXQgSW13ZSIsImVtYWlsIjoibGFpbmVfaGVybWlzdG9uQGRhdmlzLmNvIiwicGFzc3dvcmRfZGlnZXN0IjoiMWFCJUVGR0giLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xNSAwMzozNjoxNSAtMDMwMCIsInVwZGF0ZWRfYXQiOiIyMDIwLTAzLTE1IDAzOjM2OjE1IC0wMzAwIiwiZm9ubyI6Iig4NTEpIDU2NS00MTM3IHg3MzQifX0sImV4cCI6MTU4NDM0MDU3NX0.FQL8uHBDOAt3sCMk2L6E66Mo-yA1AY4MJiEVSsF8ZtE&__amp_source_origin=http%3A%2F%2F192.168.137.190",
+      "request_body": null,
+      "request_headers": {
+        "Origin": "http://192.168.137.190",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "macarron_de_autorizacion": "MDAyOWxvY2F0aW9uIGh0dHA6Ly9iYWNrZW5kLmFsZWN0cmljYS5jbAowMDExaWRlbnRpZmllciB3CjAwMThjaWQgTG9nZ2VkSW4gPSB0cnVlCjAwMmZzaWduYXR1cmUgYxeWi38dN9pNVzfVjhb42AvGOuCDCs-1wreCaIBTu4gK",
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJpbnN0YWxhY2lvbiI6IntcIjFcIjp7XCJqc29uX2NsYXNzXCI6XCJEOjpJbnN0YWxhY2lvblwiLFwiaXRlbVwiOlwie1xcXCJub19wb2xvc1xcXCI6MSxcXFwiVW9cXFwiOm51bGwsXFxcIlRcXFwiOm51bGwsXFxcInJlZ2ltZW5cXFwiOm51bGx9XCJ9fSIsInJlYWRlciI6eyJpZCI6MSwicmlkIjoiYW1wcmlkIiwidXNlcl9pZCI6MSwidXNlciI6eyJpZCI6MSwibmFtZSI6IkNoaXJydXQgSW13ZSIsImVtYWlsIjoibGFpbmVfaGVybWlzdG9uQGRhdmlzLmNvIiwicGFzc3dvcmRfZGlnZXN0IjoiMWFCJUVGR0giLCJjcmVhdGVkX2F0IjoiMjAyMC0wMy0xNSAwMzozNjoxNSAtMDMwMCIsInVwZGF0ZWRfYXQiOiIyMDIwLTAzLTE1IDAzOjM2OjE1IC0wMzAwIiwiZm9ubyI6Iig4NTEpIDU2NS00MTM3IHg3MzQifX0sImV4cCI6MTU4NDM0MDU3NX0.FQL8uHBDOAt3sCMk2L6E66Mo-yA1AY4MJiEVSsF8ZtE",
+        "__amp_source_origin": "http://192.168.137.190"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[binary data]",
+      "response_headers": {
+        "AMP-Access-Control-Allow-Source-Origin": "http://192.168.137.190",
+        "Access-Control-Allow-Origin": "http://192.168.137.190",
+        "Access-Control-Expose-Headers": "AMP-Access-Control-Allow-Source-Origin",
+        "Date": "Sun, 15 Mar 2020 06:36:15 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "max-age=0, private",
+        "ETag": "W/\"47daa53889af0ba7f93909f8ef83210a\"",
+        "X-Request-Id": "a41e423b-d197-45a6-8359-7f92e282895c",
+        "X-Runtime": "0.059736",
+        "Content-Length": "822"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

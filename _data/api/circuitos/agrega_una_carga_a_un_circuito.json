@@ -1,18 +1,35 @@
 {
   "resource": "Circuitos",
-  "resource_explanation": null,
+  "resource_explanation": "Preguntas de diseño sobre circuitos",
   "http_method": "POST",
   "route": "/api/v1/electrico/circuitos/addToCircuito.json",
   "description": "Agrega una carga a un circuito",
   "explanation": "Busca el circuito y le agrega la carga seleccionada por el Usuario",
   "parameters": [
     {
-      "name": "auth_token",
-      "description": "Token de autorización"
+      "required": true,
+      "name": "macarron_de_autorizacion",
+      "description": "Macarrón de Autorización"
     },
     {
+      "required": true,
+      "name": "auth_token",
+      "description": "Token de Autenticación"
+    },
+    {
+      "required": true,
       "name": "__amp_source_origin",
       "description": "Origen de Amp Publisher"
+    },
+    {
+      "required": true,
+      "name": "carga_id",
+      "description": "Identificación de la carga en Cargas Tree"
+    },
+    {
+      "required": true,
+      "name": "circuito",
+      "description": "Identificación del tipo de Circuito en Cargas Tree"
     }
   ],
   "response_fields": [
@@ -22,7 +39,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/electrico/circuitos/addToCircuito.json",
-      "request_body": "auth_token=eyJhbGciOiJIUzI1NiJ9.eyJyZWFkZXIiOnsiaWQiOjEsInJpZCI6ImFtcHJpZCIsInVzZXJfaWQiOjEsInVzZXIiOnsiaWQiOjEsIm5hbWUiOiJIZXJhIFN5bmR1bGxhIiwiZW1haWwiOiJlbmVpZGEuZGliYmVydEBkYXZpc3BhY29jaGEub3JnIiwicGFzc3dvcmRfZGlnZXN0IjoiMWFCJUVGR0giLCJjcmVhdGVkX2F0IjoiMjAxOS0xMi0wNSAxNjo0NjozNSAtMDMwMCIsInVwZGF0ZWRfYXQiOiIyMDE5LTEyLTA1IDE2OjQ2OjM1IC0wMzAwIiwiZm9ubyI6Ijk5MC4zOTYuMjMxMSB4NjU5NTEifX0sImV4cCI6MTU3NTY2MTU5NX0.Lxn-EPHuIRmBsIfGgYlMu9At86PtdWybe3667gIUPmM&__amp_source_origin=http%3A%2F%2F192.168.137.190",
+      "request_body": "macarron_de_autorizacion=MDAyOWxvY2F0aW9uIGh0dHA6Ly9iYWNrZW5kLmFsZWN0cmljYS5jbAowMDExaWRlbnRpZmllciB3CjAwMThjaWQgTG9nZ2VkSW4gPSB0cnVlCjAwMmZzaWduYXR1cmUgYxeWi38dN9pNVzfVjhb42AvGOuCDCs-1wreCaIBTu4gK&__amp_source_origin=http%3A%2F%2F192.168.137.190&carga_id=844&circuito=I",
       "request_headers": {
         "Origin": "http://192.168.137.190",
         "Host": "example.org",
@@ -34,18 +51,21 @@
       "request_content_type": "application/x-www-form-urlencoded",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"cargas_count\": 1,\n  \"time_stamp\": \"2019-12-05T16:46:36.777-03:00\",\n  \"items\": [\n    {\n      \"img\": \"/img/led.png\",\n      \"cantidad\": 1,\n      \"delete_link\": \"http://example.org/api/v1/electrico/circuitos/%23%3Cstruct%20Carga%20tipo_equipo=%23%3Cstruct%20TipoEquipo%20nombre=%22Foco%20Embutido%20LED%2020W%22%3E%3E/dropFromCircuito\",\n      \"id\": 844,\n      \"nombre\": \"Foco Embutido LED 20W\",\n      \"potencia\": 10,\n      \"circuito\": \"I\",\n      \"equipo\": 844\n    }\n  ]\n}",
+      "response_body": "[binary data]",
       "response_headers": {
-        "AMP-Access-Control-Allow-Source-Origin": "http://192.168.137.190",
         "Access-Control-Allow-Origin": "http://192.168.137.190",
+        "Access-Control-Allow-Methods": "POST",
         "Access-Control-Expose-Headers": "AMP-Access-Control-Allow-Source-Origin",
+        "Access-Control-Max-Age": "7200",
+        "AMP-Access-Control-Allow-Source-Origin": "http://192.168.137.190",
+        "Access-Control-Allow-Credentials": true,
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d4d5b895c817fc6103c819baec243b8a\"",
+        "ETag": "W/\"d8f0b83899556a37ecc442561991eafd\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "76236e8f-08ba-46c8-a708-192972cce56f",
-        "X-Runtime": "0.203324",
+        "X-Request-Id": "0155342d-5f9a-4a70-9980-8b18cc82673d",
+        "X-Runtime": "0.113758",
         "Vary": "Origin",
-        "Content-Length": "382"
+        "Content-Length": "308"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
